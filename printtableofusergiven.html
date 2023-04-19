@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        hr {
+            width: 90px;
+            margin-left: 0px;
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+    var num = prompt("Please enter a number to make multiplication table");
+    for (var i = 1; i < 21; i++) {
+        document.write(num + " x " + i + " = " + i * num)
+        document.write("<hr>")
+    }
+    var p = 0;
+    while (p < 21) {
+        document.write(num + "x" + p + "=" + p * num)
+        document.write("<hr/>")
+        p++;
+    }
+</script>
+
+</html>

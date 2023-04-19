@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: blue;
+            border: 2px solid rgb(157, 0, 255);
+            margin: 10% 40%;
+            width: 400px;
+            background-color: rgb(255, 138, 138);
+        }
+    </style>
+</head>
+
+<body onload="showtime()">
+    <h1>clock</h1>
+</body>
+<script type="text/javascript">
+    var session = "pm";
+    function showtime() {
+        var date = new Date();
+        date = date < 10 ? "0" + date : date;
+        var hours = date.getHours();
+        session = hours < 13 ? session = "am" : session;
+        hours = hours > 12 ? hours - 12 : hours;
+        hours = hours < 10 ? "0" + hours : hours;
+        var Minute = date.getMinutes();
+        Minute = Minute < 10 ? "0" + Minute : Minute;
+        var seconds = date.getSeconds();
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        var millisecond = date.getMilliseconds();
+        millisecond = millisecond < 100 ? "0" + millisecond : millisecond;
+        millisecond = millisecond < 10 ? "0" + millisecond : millisecond
+
+        var time = hours + " : " + Minute + " : " + seconds + " : " + millisecond + " : " + session;
+        document.getElementsByTagName('h1')[0].innerText = time;
+        setTimeout(showtime, 1);
+    }
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <input type="number" name="first" id="first_operand" step="0010" required placeholder="enter first number" />
+        <!--step ne meaning k jetla step hoi etla step no gap raine agad vadhe-->
+        <select id="operation">
+            <option value="+">+</option>
+            <!-- ahiya value ma je lakhie e store thai backend ma and option ma lakhie e user ne dekhai-->
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" name="second" id="second_operand" step="any" placeholder="enter second number" />
+        <br /><br />
+        <button onclick="cal()" type="submit"> calulate</button>
+        <br /><br />
+        <input type="number" name="" id="result" readonly="" />
+    </center>
+</body>
+<script type="text/javascript">
+    function cal() {
+        var operand1 = document.getElementById('first_operand').value;
+        var operand2 = document.getElementById('second_operand').value;
+        var operation = document.getElementById('operation').value
+
+        if (operation == '+') { var result = parseInt(operand1) + parseInt(operand2); }
+        if (operation == '-') { var result = parseInt(operand1) - parseInt(operand2); }
+        if (operation == '*') { var result = parseInt(operand1) * parseInt(operand2); }
+        if (operation == '/') { var result = parseInt(operand1) / parseInt(operand2); }
+        //alert(result);// ahiya alert 1 j vaar etla mate ave k 4 vaar lakhi to 4 var alert thase
+        document.getElementById('result').value = result;//ama pela result namni id ma kai value hati nai but have result namno j variable hase eni jetli value hase te e id ni value na store thai jase
+
+
+    }
+</script>
+
+</html>

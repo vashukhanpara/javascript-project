@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #main {
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+            position: relative;
+            top: 40px;
+            left: 40px;
+            border: 1px red solid;
+
+        }
+
+        #gaun {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="move()">Start animation</button>
+    <div id="main">
+        <div id="gaun"></div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    // function move() {
+    //     var red = document.getElementById('gaun')
+    //     var por = 0;
+    
+
+    // var animate = setInterval(animation, 1);
+    //     function animation() {
+    //         por++
+    //         if (por <= 350) {
+    //             red.style.top = por + "px";
+    //             red.style.left = por + "px";
+    //         }
+    //     }
+
+    // }
+
+
+
+
+    //second logic----------------------
+
+
+
+    function move() {
+        var red = document.getElementById('gaun')
+        var por = 0;
+        var c = 1;
+        var animate = setInterval(animation, 1);
+        function animation() {
+            if (por == 350) { clearInterval(animate); }
+            else {
+                por++;
+                red.style.top = por + "px";
+                red.style.left = por + "px";
+                }
+            }
+        }
+    
+</script>
+
+</html>

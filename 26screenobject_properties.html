@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="availheight()"> avail height</button>
+    <button onclick="fullheight()"> full height</button>
+    <button onclick="availwidth()"> avail width</button>
+    <button onclick="fullwidth()"> full width</button>
+
+
+</body>
+<script type="text/javascript">
+function availheight(){
+    var avail_height = screen.availHeight;
+    alert(avail_height);
+}
+function fullheight(){
+    var full_height = screen.height;
+ alert(full_height);
+ }
+ function availwidth(){
+    var avail_width = screen.availWidth;
+    alert(avail_width);
+}
+function fullwidth(){
+    var full_width = screen.width;
+ alert(full_width);
+ }
+</script>
+</html>

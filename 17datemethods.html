@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button onclick="Year()">Year</button>
+    <button onclick="Month()">Month</button>
+    <button onclick="Hours()">Hours</button>
+    <button onclick="todate()">Date</button>
+    <button onclick="minute()">Minute</button>
+    <button onclick="Day()">Day</button>
+
+
+
+</body>
+<script type="text/javascript">
+    var date = new Date();
+    function Year() {
+        document.getElementById('result').innerText = "Year is : " + date.getFullYear();
+    }
+    function Month() {
+        var month = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'octomber', 'november', 'december']
+        document.getElementById('result').innerText = "Month is : " + month[date.getMonth()];// ano meaning k month namna variable array mathi jetla mo index avse eni value put thase
+    }
+    function Hours() {
+        document.getElementById('result').innerText = "Hour is : " + date.getHours();
+    }
+    function todate() {
+        document.getElementById('result').innerText = "Date is : " + date.getDate();
+    }
+    function minute() {
+        document.getElementById('result').innerText = "Minute is : " + date.getMinutes();
+    }
+    function Day() {
+        var day = ['sunday', 'monday', 'tuesday', 'wednesday', 'thrusday', 'friday', 'saturday']
+        document.getElementById('result').innerText = "Day is : " + day[date.getDay()];
+    }
+    // pa6i haji ama second hoi , mili second hoi , time hoi
+</script>
+
+</html>

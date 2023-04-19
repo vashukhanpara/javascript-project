@@ -1,0 +1,29 @@
+<!-- regix no use e 6 k e value check kari sake uppercase lowercase ava kamo e kari sake -->
+<!-- avi ghabi badhi regix hoi e website ma joi levani and ema eno use pan lakhyo hase -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+var pattern = /[a-z]/ig;
+var str = "000sldkfjsl04237";
+// test() and exec()------------------
+console.log(pattern.test(str));//answer true k false ma j aavse 
+console.log(pattern.exec(str));
+
+//tostring()--------------------------------
+var patrn = new RegExp('[a-z][0-9]' , 'i');//tostring() no use e 6 k e pattern change kari de
+console.log(patrn.toString());//ama tostring ma kai argument nai ave
+</script>
+</html>

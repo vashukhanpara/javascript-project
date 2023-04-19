@@ -15,10 +15,10 @@
 <body>
     <center>
         <input type="number" name="first" id="first_operand" step="0010" required placeholder="enter first number" />
-        <!--step ne meaning k jetla step hoi etla step no gap raine agad vadhe-->
+ 
         <select id="operation">
             <option value="+">+</option>
-            <!-- ahiya value ma je lakhie e store thai backend ma and option ma lakhie e user ne dekhai-->
+            
             <option value="-">-</option>
             <option value="*">x</option>
             <option value="/">/</option>
@@ -40,8 +40,8 @@
         if (operation == '-') { var result = parseInt(operand1) - parseInt(operand2); }
         if (operation == '*') { var result = parseInt(operand1) * parseInt(operand2); }
         if (operation == '/') { var result = parseInt(operand1) / parseInt(operand2); }
-        //alert(result);// ahiya alert 1 j vaar etla mate ave k 4 vaar lakhi to 4 var alert thase
-        document.getElementById('result').value = result;//ama pela result namni id ma kai value hati nai but have result namno j variable hase eni jetli value hase te e id ni value na store thai jase
+        
+        document.getElementById('result').value = result;
 
 
     }
